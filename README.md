@@ -1,4 +1,5 @@
-# 
+# FRBAL: Fast Radio Burst Analysis Library
+
 This code searches for Fast Radio Bursts in data collected from the Green Bank 20m radio telescope. There are two main steps to the pipeline: the first is a conversion of the raw observation files to .fil filterbank format (which makes them a lot more compact). The second is the search for strong dispersed pulses using the Fast Discrete Dispersion Measure Transform (FDMT; Zackay & Ofek 2017), with some crude shell scripts to run it in parallel across the academic computing cluster at Green Bank.
 
 ## File Conversion Pipeline
