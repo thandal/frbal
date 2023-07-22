@@ -4,7 +4,7 @@ This code searches for Fast Radio Bursts in data collected from the Green Bank 2
 
 ## File Conversion Pipeline
 This pipeline is run on the 20m-data machine.
-NOTE: there have been problems with this pipeline causing problems when a high-resolution observation is collect. I added ionice, but it is still probably wise to avoid running it during observations.
+NOTE: there have been problems with this pipeline causing load issues when a high-resolution observation is being collected. I added ionice, but it is still probably wise to avoid running it during observations.
 
 Search for long observations:
 `find_long_observations.sh`
