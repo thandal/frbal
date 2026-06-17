@@ -13,7 +13,7 @@
 # 2021-10-15: removed euclid, its processes seem to hang...
 # 2022-02-08: added euclid back in.
 # 2022-02-08: added titania
-MACHINES="newton newton fourier fourier planck planck thales thales thales euler euler euclid euclid euclid titania titania"
+MACHINES="euclid euclid euclid thales thales thales fourier fourier planck planck newton newton"
 UNIQUE_MACHINES=`echo $MACHINES | tr ' ' '\n' | sort -u`
 
 if [ 1 -ne $# ]
@@ -62,17 +62,18 @@ do
 done
 
 # Machines -- https://www.gb.nrao.edu/pubcomputing/public.shtml
-#  newton	Redhat EL7	192GB, 2.4GHz, 8 cores		Remote access only; lustre client
-#  fourier	Redhat EL7	192GB, 2.4GHz, 8 cores		Remote access only; lustre client
-#  planck	Redhat EL7	192GB, 2.4GHz, 8 cores		Remote access only; lustre client
-#  euclid	Redhat EL7	128GB, 2.1GHz 16 cores		Remote access only; lustre client, 2 x GPU
-#  thales	Redhat EL7	128GB, 2.1GHz 16 cores		Remote access only; lustre client, 1 x GPU
-#  euler                        256 GB, 2.6GHz 32 cores
-#  titania                      128 GB, 2.5GHz 4 cores
+# Now -- https://greenbankobservatory.org/portal/gbt/processing/
 
-#  maxwell                       64 GB, 8 cores
+#  euclid	Redhat EL8	128GB 2.1GHz 16 cores		Remote access only; lustre client, 2 x GPU
+#  thales	Redhat EL8	128GB 2.1GHz 16 cores		Remote access only; lustre client, 1 x GPU
+#  fourier	Redhat EL8	192GB 2.4GHz  8 cores		Remote access only; lustre client
+#  planck	Redhat EL8	192GB 2.4GHz  8 cores		Remote access only; lustre client
+#  newton	Redhat EL8	192GB 2.4GHz  8 cores		Remote access only; lustre client
 
 # Others
+#  titania                      128 GB, 2.5GHz 4 cores 		Observing machine! 1x Quadro P600
+#  euler                        256 GB, 2.6GHz 32 cores  	"Connection closed by UNKNOWN port 65535"
+#  maxwell                       64 GB, 8 cores
 #  bratac                         8 GB, 3.4GHz 8 cores
 #  kepler                        16 GB, 4 cores
 #  20m-data                     32GB, 24 cores                  Also captures data from the 20m
@@ -80,13 +81,13 @@ done
 #  korra                        16 GB, 4 cores
 #  egret                         7 GB, 4 cores
 #  belinda                       7 GB, 4 cores
-#  cardano	Redhat EL7	24 GB, 8 cores			Remote access only, /home/scratch is local, no BeeGFS
+#  cardano	Redhat EL8	24 GB, 8 cores			Remote access only, /home/scratch is local, no BeeGFS
 # Unknown
 #  blh0
 #  mandc8
 
 # NOT FOR GENERAL PURPOSE COMPUTING
-#  arcturus	Redhat EL7	128GB, 2.1Ghz cores, 32 cores   Remote access only; lustre client for GBT pipeline runs
+#  arcturus	Redhat EL8	128GB, 2.1Ghz cores, 32 cores   Remote access only; lustre client for GBT pipeline runs
 #  kepler	Redhat EL6	16GB, 2.4Ghz, 8 cores		Remote access only, /home/scratch is local, no lustre
 #  galileo 64 GB, 24 cores Exclusive for Software Development Division
 

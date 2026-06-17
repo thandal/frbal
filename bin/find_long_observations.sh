@@ -4,7 +4,9 @@
 rm ~/long_observations.txt
 
 cd ~/SkynetData
-OBSERVATIONS=`ls -1`
+#OBSERVATIONS=`ls -1`
+OBSERVATIONS=`ls -1 | grep Skynet_6`
+echo "LIMITED TO SkyNet_6*"
 for OBSERVATION in $OBSERVATIONS
 do 
 	NUM_FITS=`find $OBSERVATION -name \*_\?\?\?\?.fits | wc -l`

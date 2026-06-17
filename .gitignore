@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+SECRET.md
+
+# Local conda environment for the validation harness
+.conda/
+
+20m_gb_nrao_frb
